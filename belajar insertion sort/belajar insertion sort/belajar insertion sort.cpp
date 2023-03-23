@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-nt arr[20];											// Membuat Array dengan panjang data 20
+int arr[20];											// Membuat Array dengan panjang data 20
 int n;													// Membuat Variable Inputan n
 
 void input() {					// Procedure Input
@@ -55,4 +55,23 @@ void insertionsort() {			// Procedure Insertionsort
 		}
 	}
 
+}
+
+void display() {
+	cout << endl;												//output baris kosong
+	cout << "\n==================================" << endl;		//output ke layar	
+	cout << "element array yang telah tersusun" << endl;		//output ke layar
+	cout << "==================================" << endl;		//output ke layar 
+
+	for (int j = 0; j < n; j++) {					//looping dengan j dimulai dari 0 hingga n-1
+		cout << arr[j] << endl;						//output ke layar
+	}
+	cout << endl;									//output ke layar
+}
+
+int main()
+{
+	input();			//memanggil input
+	insertionsort();	//memanggil insertionsort
+	display();			//memanggil display
 }
